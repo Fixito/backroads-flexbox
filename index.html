@@ -43,6 +43,7 @@
               class="nav-toggle"
               id="nav-toggle"
               aria-label="Ouvrir/fermer la navigation"
+              aria-controls="nav-links"
             >
               <i class="fas fa-bars"></i>
             </button>
@@ -93,8 +94,9 @@
                 href="https://facebook.com"
                 target="_blank"
                 class="nav-icon"
-                ><i class="fab fa-facebook"></i
-              ></a>
+                ><i class="fab fa-facebook" aria-hidden="true"></i>
+                <span class="sr-only">Facebook</span>
+              </a>
             </li>
             <!-- end of single icon -->
             <!-- single icon -->
@@ -103,8 +105,12 @@
                 href="https://twitter.com"
                 target="_blank"
                 class="nav-icon"
-                ><i class="fa-brands fa-x-twitter"></i
-              ></a>
+                ><i
+                  class="fa-brands fa-x-twitter"
+                  aria-hidden="true"
+                ></i>
+                <span class="sr-only">X</span>
+              </a>
             </li>
             <!-- end of single icon -->
             <!-- single icon -->
@@ -113,8 +119,9 @@
                 href="https://www.instagram.com/"
                 target="_blank"
                 class="nav-icon"
-                ><i class="fab fa-instagram"></i
-              ></a>
+                ><i class="fab fa-instagram" aria-hidden="true"></i>
+                <span class="sr-only">Instagram</span>
+              </a>
             </li>
             <!-- end of single icon -->
           </ul>
@@ -135,8 +142,8 @@
           >
         </div>
       </section>
+      <!-- end of hero  -->
     </header>
-    <!-- end of hero  -->
     <!-- end of header -->
 
     <!-- about section -->
@@ -146,15 +153,17 @@
         <h2>à propos <span>de nous</span></h2>
       </div>
       <!-- end of title -->
+
       <div class="section-center about-center">
         <!-- about img wrapper -->
-        <article class="about-img">
+        <div class="about-img">
           <img
             src="./images/about.jpeg"
             alt="plage magnifique"
             class="about-photo"
           />
-        </article>
+        </div>
+
         <!-- about info -->
         <div class="about-info">
           <h3>Explorez la différence</h3>
@@ -183,6 +192,7 @@
         <h2>nos <span>services</span></h2>
       </div>
       <!-- end of title -->
+
       <div class="section-center services-center">
         <article class="service">
           <span class="service-icon">
@@ -196,6 +206,7 @@
             </p>
           </div>
         </article>
+
         <article class="service">
           <span class="service-icon">
             <i class="fas fa-tree fa-fw"></i>
@@ -208,6 +219,7 @@
             </p>
           </div>
         </article>
+
         <article class="service">
           <span class="service-icon">
             <i class="fas fa-socks fa-fw"></i>
@@ -231,140 +243,153 @@
         <h2>Voyages <span>en vedette</span></h2>
       </div>
       <!-- end of title -->
-      <section class="section-center featured-center">
+
+      <div class="section-center featured-center">
         <!-- single tour -->
-        <article class="tour-card">
-          <div class="tour-img-container">
-            <img
-              src="./images/tour-1.jpeg"
-              alt="Voyage au Tibet"
-              class="tour-img"
-            />
-            <p class="tour-date">26 août 2020</p>
-          </div>
-          <!-- tour info -->
-          <div class="tour-info">
-            <div class="tour-title">
-              <h4>Aventure au Tibet</h4>
-              <p>6 jours</p>
+        <a href="#" class="tour-card">
+          <article>
+            <div class="tour-img-container">
+              <img
+                src="./images/tour-1.jpeg"
+                alt="Voyage au Tibet"
+                class="tour-img"
+              />
+              <p class="tour-date">26 août 2020</p>
             </div>
-            <p>
-              Découvrez les merveilles du Tibet avec une aventure de 6
-              jours à travers des paysages à couper le souffle.
-            </p>
-          </div>
-          <!-- end of tour info -->
-          <div class="tour-footer">
-            <p>
-              <span>
-                <i class="fas fa-map"></i>
-                Chine
-              </span>
-            </p>
-            <p>à partir de 2100€</p>
-          </div>
-        </article>
+            <!-- tour info -->
+            <div class="tour-info">
+              <div class="tour-title">
+                <h4>Aventure au Tibet</h4>
+                <p>6 jours</p>
+              </div>
+              <p>
+                Découvrez les merveilles du Tibet avec une aventure de
+                6 jours à travers des paysages à couper le souffle.
+              </p>
+            </div>
+            <!-- end of tour info -->
+            <div class="tour-footer">
+              <p>
+                <span>
+                  <i class="fas fa-map"></i>
+                  Chine
+                </span>
+              </p>
+              <p>à partir de 2100€</p>
+            </div>
+          </article>
+        </a>
         <!-- end of single tour -->
+
         <!-- single tour -->
-        <article class="tour-card">
-          <div class="tour-img-container">
-            <img
-              src="./images/tour-2.jpeg"
-              alt="Voyage à Java"
-              class="tour-img"
-            />
-            <p class="tour-date">1er octobre 2020</p>
-          </div>
-          <!-- tour info -->
-          <div class="tour-info">
-            <div class="tour-title">
-              <h4>Le meilleur de Java</h4>
-              <p>11 jours</p>
+        <a href="#" class="tour-card">
+          <article>
+            <div class="tour-img-container">
+              <img
+                src="./images/tour-2.jpeg"
+                alt="Voyage à Java"
+                class="tour-img"
+              />
+              <p class="tour-date">1er octobre 2020</p>
             </div>
-            <p>
-              Explorez les trésors de Java pendant 11 jours, avec des
-              visites culturelles et des paysages impressionnants.
-            </p>
-          </div>
-          <!-- end of tour info -->
-          <div class="tour-footer">
-            <p>
-              <span>
-                <i class="fas fa-map"></i>
-                Indonésie
-              </span>
-            </p>
-            <p>à partir de 1400€</p>
-          </div>
-        </article>
+            <!-- tour info -->
+            <div class="tour-info">
+              <div class="tour-title">
+                <h4>Le meilleur de Java</h4>
+                <p>11 jours</p>
+              </div>
+              <p>
+                Explorez les trésors de Java pendant 11 jours, avec
+                des visites culturelles et des paysages
+                impressionnants.
+              </p>
+            </div>
+            <!-- end of tour info -->
+            <div class="tour-footer">
+              <p>
+                <span>
+                  <i class="fas fa-map"></i>
+                  Indonésie
+                </span>
+              </p>
+              <p>à partir de 1400€</p>
+            </div>
+          </article>
+        </a>
         <!-- end of single tour -->
+
         <!-- single tour -->
-        <article class="tour-card">
-          <div class="tour-img-container">
-            <img
-              src="./images/tour-3.jpeg"
-              alt="Voyage à Hong-Kong"
-              class="tour-img"
-            />
-            <p class="tour-date">15 septembre 2020</p>
-          </div>
-          <!-- tour info -->
-          <div class="tour-info">
-            <div class="tour-title">
-              <h4>Explorez Hong-Kong</h4>
-              <p>8 jours</p>
+        <a href="#" class="tour-card">
+          <article class="tour-card">
+            <div class="tour-img-container">
+              <img
+                src="./images/tour-3.jpeg"
+                alt="Voyage à Hong-Kong"
+                class="tour-img"
+              />
+              <p class="tour-date">15 septembre 2020</p>
             </div>
-            <p>
-              Partez à la découverte de Hong-Kong pendant 8 jours, une
-              ville dynamique et riche en culture.
-            </p>
-          </div>
-          <!-- end of tour info -->
-          <div class="tour-footer">
-            <p>
-              <span>
-                <i class="fas fa-map"></i>
-                Hong-Kong
-              </span>
-            </p>
-            <p>à partir de 500€</p>
-          </div>
-        </article>
+            <!-- tour info -->
+            <div class="tour-info">
+              <div class="tour-title">
+                <h4>Explorez Hong-Kong</h4>
+                <p>8 jours</p>
+              </div>
+              <p>
+                Partez à la découverte de Hong-Kong pendant 8 jours,
+                une ville dynamique et riche en culture.
+              </p>
+            </div>
+            <!-- end of tour info -->
+            <div class="tour-footer">
+              <p>
+                <span>
+                  <i class="fas fa-map"></i>
+                  Hong-Kong
+                </span>
+              </p>
+              <p>à partir de 500€</p>
+            </div>
+          </article>
+        </a>
         <!-- end of single tour -->
+
         <!-- single tour -->
-        <article class="tour-card">
-          <div class="tour-img-container">
-            <img
-              src="./images/tour-4.jpeg"
-              alt="Voyage au Kenya"
-              class="tour-img"
-            />
-            <p class="tour-date">5 décembre 2020</p>
-          </div>
-          <!-- tour info -->
-          <div class="tour-info">
-            <div class="tour-title">
-              <h4>Points forts du Kenya</h4>
-              <p>20 jours</p>
+        <a href="#" class="tour-card">
+          <article>
+            <div class="tour-img-container">
+              <img
+                src="./images/tour-4.jpeg"
+                alt="Voyage au Kenya"
+                class="tour-img"
+              />
+              <p class="tour-date">5 décembre 2020</p>
             </div>
-            <p>
-              Vivez une aventure de 20 jours au Kenya, explorant les
-              paysages et la faune unique de ce pays incroyable.
-            </p>
-          </div>
-          <!-- end of tour info -->
-          <div class="tour-footer">
-            <p>
-              <span>
-                <i class="fas fa-map"></i>
-                Kenya
-              </span>
-            </p>
-            <p>à partir de 3300€</p>
-          </div>
-        </article>
+            <!-- tour info -->
+            <div class="tour-info">
+              <div class="tour-title">
+                <h4>Points forts du Kenya</h4>
+                <p>20 jours</p>
+              </div>
+              <p>
+                Vivez une aventure de 20 jours au Kenya, explorant les
+                paysages et la faune unique de ce pays incroyable.
+              </p>
+            </div>
+            <!-- end of tour info -->
+            <div class="tour-footer">
+              <p>
+                <span>
+                  <i class="fas fa-map"></i>
+                  Kenya
+                </span>
+              </p>
+              <p>à partir de 3300€</p>
+            </div>
+          </article>
+        </a>
         <!-- end of single tour -->
-      </section>
+      </div>
       <div class="tour-btn">
         <a href="#" class="btn">Tous les voyages</a>
       </div>
@@ -373,6 +398,7 @@
 
     <!-- contact -->
     <section class="section contact" id="contact">
+      <h2 class="sr-only">Contact</h2>
       <div class="section-center contact-center">
         <!-- contact title -->
         <article class="contact-title">
@@ -387,9 +413,11 @@
         <!-- end of contact title -->
         <!-- contact form -->
         <form class="contact-form">
+          <label for="email" class="sr-only">email</label>
           <input
             type="email"
             name="email"
+            id="email"
             class="form-control"
             placeholder="votre email"
           />
@@ -402,9 +430,10 @@
 
     <!-- gallery  -->
     <section id="gallery">
+      <h2 class="sr-only">Galerie</h2>
       <div class="gallery-center">
         <!-- single item -->
-        <article class="gallery-img-container">
+        <div class="gallery-img-container">
           <img
             src="./images/tour-1.jpeg"
             class="gallery-img"
@@ -413,10 +442,10 @@
           <a href="#" class="gallery-icon">
             <i class="fas fa-search"></i>
           </a>
-        </article>
+        </div>
         <!-- end of single item -->
         <!-- single item -->
-        <article class="gallery-img-container">
+        <div class="gallery-img-container">
           <img
             src="./images/tour-2.jpeg"
             class="gallery-img"
@@ -425,10 +454,10 @@
           <a href="#" class="gallery-icon">
             <i class="fas fa-search"></i>
           </a>
-        </article>
+        </div>
         <!-- end of single item -->
         <!-- single item -->
-        <article class="gallery-img-container">
+        <div class="gallery-img-container">
           <img
             src="./images/tour-3.jpeg"
             class="gallery-img"
@@ -437,10 +466,10 @@
           <a href="#" class="gallery-icon">
             <i class="fas fa-search"></i>
           </a>
-        </article>
+        </div>
         <!-- end of single item -->
         <!-- single item -->
-        <article class="gallery-img-container">
+        <div class="gallery-img-container">
           <img
             src="./images/tour-4.jpeg"
             class="gallery-img"
@@ -449,10 +478,10 @@
           <a href="#" class="gallery-icon">
             <i class="fas fa-search"></i>
           </a>
-        </article>
+        </div>
         <!-- end of single item -->
         <!-- single item -->
-        <article class="gallery-img-container">
+        <div class="gallery-img-container">
           <img
             src="./images/tour-5.jpeg"
             class="gallery-img"
@@ -461,10 +490,10 @@
           <a href="#" class="gallery-icon">
             <i class="fas fa-search"></i>
           </a>
-        </article>
+        </div>
         <!-- end of single item -->
         <!-- single item -->
-        <article class="gallery-img-container">
+        <div class="gallery-img-container">
           <img
             src="./images/tour-6.jpeg"
             class="gallery-img"
@@ -473,10 +502,10 @@
           <a href="#" class="gallery-icon">
             <i class="fas fa-search"></i>
           </a>
-        </article>
+        </div>
         <!-- end of single item -->
         <!-- single item -->
-        <article class="gallery-img-container">
+        <div class="gallery-img-container">
           <img
             src="./images/tour-1.jpeg"
             class="gallery-img"
@@ -485,10 +514,10 @@
           <a href="#" class="gallery-icon">
             <i class="fas fa-search"></i>
           </a>
-        </article>
+        </div>
         <!-- end of single item -->
         <!-- single item -->
-        <article class="gallery-img-container">
+        <div class="gallery-img-container">
           <img
             src="./images/tour-2.jpeg"
             class="gallery-img"
@@ -497,7 +526,7 @@
           <a href="#" class="gallery-icon">
             <i class="fas fa-search"></i>
           </a>
-        </article>
+        </div>
         <!-- end of single item -->
       </div>
     </section>
